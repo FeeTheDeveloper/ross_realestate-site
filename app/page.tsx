@@ -1,10 +1,26 @@
+import Image from "next/image";
 import { SignatureMotion } from "../components/SignatureMotion";
 import { InstagramFeed } from "../components/InstagramFeed";
+import { SplashIntro } from "../components/brand/SplashIntro";
+import { BrandLogo } from "../components/brand/BrandLogo";
 
 export default function HomePage() {
   return (
     <main className="bg-jet text-ivory">
+      <SplashIntro />
       <section className="container-site flex min-h-[85vh] flex-col justify-center gap-10 py-20">
+        <div className="flex flex-col items-start gap-6">
+          <BrandLogo size="md" priority className="drop-shadow-[0_20px_40px_rgba(0,0,0,0.35)]" />
+          <SignatureMotion as="div" className="w-40">
+            <Image
+              src="/brand/signature/signature.svg"
+              alt="Tross Realtor signature"
+              width={160}
+              height={40}
+              className="h-auto w-full"
+            />
+          </SignatureMotion>
+        </div>
         <SignatureMotion as="p" className="text-xs uppercase tracking-[0.4em] text-bronze">
           Tross 3rd Realtor
         </SignatureMotion>
