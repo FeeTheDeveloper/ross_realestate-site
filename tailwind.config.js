@@ -11,6 +11,9 @@ module.exports = {
         sans: ["var(--font-inter)", "sans-serif"]
       },
       colors: {
+        primary: "#0B0B0B",
+        secondary: "#F5F2ED",
+        accent: "#B08D57",
         jet: "#0b0b0c",
         charcoal: "#141414",
         ivory: "#f6f1e9",

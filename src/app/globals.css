@@ -7,12 +7,12 @@
 }
 
 body {
-  @apply bg-jet text-ivory antialiased;
+  @apply bg-primary text-secondary antialiased;
 }
 
 ::selection {
-  background: theme("colors.bronze");
-  color: theme("colors.jet");
+  background: theme("colors.accent");
+  color: theme("colors.primary");
 }
 
 .container-site {

@@ -19,19 +19,19 @@ export function Header() {
   return (
     <motion.header className="sticky top-0 z-40 w-full">
       <motion.div
-        className="pointer-events-none absolute inset-0 bg-jet/80 backdrop-blur-sm"
+        className="pointer-events-none absolute inset-0 border-b border-secondary/10 bg-primary/80 backdrop-blur-sm"
         style={{ opacity: backgroundOpacity }}
       />
       <div className="container-site relative flex h-16 items-center justify-between gap-6">
         <Link href="/" className="flex items-center">
-          <BrandLogo size="sm" className="opacity-90" />
+          <BrandLogo size="sm" priority className="opacity-90" />
         </Link>
-        <nav className="flex flex-wrap items-center justify-end gap-3 text-[10px] uppercase tracking-[0.25em] text-warm-ivory/80 sm:gap-5 sm:text-xs">
+        <nav className="flex flex-wrap items-center justify-end gap-3 text-[10px] uppercase tracking-[0.25em] text-secondary/70 sm:gap-5 sm:text-xs">
           {navLinks.map((link) => (
             <Link
               key={link.label}
               href={link.href}
-              className="transition-colors duration-300 hover:text-warm-ivory"
+              className="transition-colors duration-300 hover:text-secondary"
             >
               {link.label}
             </Link>
