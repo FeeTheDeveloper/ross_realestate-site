@@ -27,7 +27,7 @@ export function SplashIntro() {
     <AnimatePresence>
       {isVisible ? (
         <motion.div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-jet/95"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-primary/95"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -41,7 +41,7 @@ export function SplashIntro() {
             className="flex flex-col items-center gap-6"
           >
             <BrandLogo size="lg" priority />
-            <p className="text-xs uppercase tracking-[0.4em] text-bronze">Tross 3rd Realtor</p>
+            <p className="text-xs uppercase tracking-[0.4em] text-accent">Tross 3rd Realtor</p>
           </motion.div>
         </motion.div>
       ) : null}
