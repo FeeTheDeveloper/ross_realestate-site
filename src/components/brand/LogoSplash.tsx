@@ -31,13 +31,18 @@ export function LogoSplash({ onComplete }: LogoSplashProps) {
       aria-label="Dismiss intro"
     >
       <motion.div
-        className="flex flex-col items-center gap-6 text-center"
-        animate={{ opacity: [0, 1, 1, 0], scale: [0.92, 1, 1, 1.04] }}
+        className="flex flex-col items-center gap-8 px-6 text-center"
+        animate={{ opacity: [0, 1, 1, 0], scale: [0.9, 1, 1, 1.05] }}
         transition={{ duration: 1.8, ease: "easeInOut", times: [0, 0.3, 0.7, 1] }}
         onAnimationComplete={handleComplete}
       >
-        <BrandLogo size="lg" priority className="scale-125 sm:scale-150" />
-        <p className="text-xs uppercase tracking-[0.4em] text-accent">
+        <BrandLogo
+          size="lg"
+          forcePng
+          priority
+          className="w-[220px] sm:w-[240px] md:w-[280px] lg:w-[320px]"
+        />
+        <p className="text-xs uppercase tracking-[0.45em] text-accent/70">
           TED ROSS REAL ESTATE
         </p>
       </motion.div>

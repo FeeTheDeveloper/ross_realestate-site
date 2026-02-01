@@ -22,9 +22,9 @@ export function Header() {
         className="pointer-events-none absolute inset-0 border-b border-secondary/10 bg-primary/80 backdrop-blur-sm"
         style={{ opacity: backgroundOpacity }}
       />
-      <div className="container-site relative flex h-16 items-center justify-between gap-6">
+      <div className="container-site relative flex min-h-[72px] items-center justify-between gap-6 py-4 md:min-h-[88px] md:py-5">
         <Link href="/" className="flex items-center">
-          <BrandLogo size="sm" priority className="opacity-90" />
+          <BrandLogo size="md" priority className="scale-110 opacity-90 md:scale-125" />
         </Link>
         <nav className="flex flex-wrap items-center justify-end gap-3 text-[10px] uppercase tracking-[0.25em] text-secondary/70 sm:gap-5 sm:text-xs">
           {navLinks.map((link) => (

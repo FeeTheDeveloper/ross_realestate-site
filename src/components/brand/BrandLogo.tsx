@@ -13,15 +13,23 @@ type BrandLogoProps = {
   size?: keyof typeof sizeMap;
   className?: string;
   priority?: boolean;
+  forcePng?: boolean;
 };
 
-export function BrandLogo({ size = "md", className, priority = false }: BrandLogoProps) {
+export function BrandLogo({
+  size = "md",
+  className,
+  priority = false,
+  forcePng = false
+}: BrandLogoProps) {
   const [usePng, setUsePng] = useState(true);
   const dimension = sizeMap[size];
-  const src = useMemo(
-    () => (usePng ? "/brand/logo/logo-primary.png" : "/brand/logo/logo-primary.svg"),
-    [usePng]
-  );
+  const src = useMemo(() => {
+    if (forcePng) {
+      return "/brand/logo/logo-primary.png";
+    }
+    return usePng ? "/brand/logo/logo-primary.png" : "/brand/logo/logo-primary.svg";
+  }, [forcePng, usePng]);
 
   return (
     <Image
@@ -31,7 +39,7 @@ export function BrandLogo({ size = "md", className, priority = false }: BrandLog
       height={dimension}
       priority={priority}
       className={["h-auto w-auto", className].filter(Boolean).join(" ")}
-      onError={() => setUsePng(false)}
+      onError={forcePng ? undefined : () => setUsePng(false)}
     />
   );
 }
