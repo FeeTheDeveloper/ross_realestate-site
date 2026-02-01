@@ -3,18 +3,32 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
-  @apply bg-primary text-secondary antialiased;
+  @apply bg-brand-white text-brand-navy antialiased;
 }
 
 ::selection {
-  background: theme("colors.accent");
-  color: theme("colors.primary");
+  background: theme("colors.brand.gold");
+  color: theme("colors.brand.navy");
 }
 
 .container-site {
   @apply mx-auto w-full max-w-6xl px-6;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-navy text-brand-white hover:bg-brand-blue;
+  }
+
+  .btn-accent {
+    @apply bg-brand-gold text-brand-navy hover:bg-brand-goldDeep;
+  }
+
+  .btn-danger {
+    @apply bg-brand-red text-brand-white hover:bg-brand-red/90;
+  }
 }

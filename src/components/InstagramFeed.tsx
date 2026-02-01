@@ -57,8 +57,8 @@ export function InstagramFeed() {
 
   if (status === "error") {
     return (
-      <div className="rounded-2xl border border-secondary/20 bg-primary/70 p-8 text-secondary/80">
-        <p className="text-sm uppercase tracking-[0.3em] text-accent">Instagram</p>
+      <div className="rounded-2xl border border-brand-navy/10 bg-brand-softWhite p-8 text-brand-navy/80">
+        <p className="text-sm uppercase tracking-[0.3em] text-brand-gold">Instagram</p>
         <p className="mt-3 text-lg font-medium">
           Lifestyle updates are currently offline. Check back soon.
         </p>
@@ -72,7 +72,7 @@ export function InstagramFeed() {
         Array.from({ length: 6 }).map((_, index) => (
           <div
             key={`loading-${index}`}
-            className="aspect-[4/5] rounded-2xl bg-primary/70"
+            className="aspect-[4/5] rounded-2xl bg-brand-softWhite"
           />
         ))}
       {status === "success" &&
@@ -82,7 +82,7 @@ export function InstagramFeed() {
             href={post.permalink}
             target="_blank"
             rel="noreferrer"
-            className="group relative aspect-[4/5] overflow-hidden rounded-2xl bg-primary"
+            className="group relative aspect-[4/5] overflow-hidden rounded-2xl bg-brand-softWhite"
           >
             <img
               src={
@@ -93,7 +93,7 @@ export function InstagramFeed() {
               alt="Instagram post"
               className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-primary/20 opacity-0 transition duration-500 group-hover:opacity-100" />
+            <div className="absolute inset-0 bg-brand-navy/10 opacity-0 transition duration-500 group-hover:opacity-100" />
           </a>
         ))}
     </div>
